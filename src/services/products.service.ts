@@ -1,14 +1,14 @@
-import { IProducts, IProductsID } from '../interfaces';
-import ProductsModel from '../models';
+import { IProduct, IProductID } from '../interfaces';
+import { ProductsModel } from '../models';
 
-export default class ProductService {
+export default class ProductsService {
   public products = new ProductsModel();
 
-  public create = (productData: IProducts): Promise<IProductsID> => (
+  public create = (productData: IProduct): Promise<IProductID> => (
     this.products.create(productData)
   );
 
-  public getAll = async (): Promise<IProductsID[]> => {
+  public getAll = async (): Promise<IProductID[]> => {
     const products = await this.products.getAll();
     return products;
   };

@@ -1,3 +1,4 @@
-import { IProducts, IProductsID } from './IProducts';
+import { IProduct, IProductID } from './IProduct';
+import { IUser, IUserID } from './IUser';
 
-export { IProducts, IProductsID };
+export { IProduct, IProductID, IUser, IUserID };
