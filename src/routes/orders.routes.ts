@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import { OrderController } from '../controllers';
 
-const productsRouter = Router();
+const ordersRouter = Router();
 
 const orderController = new OrderController();
 
-productsRouter.get('/', orderController.getAll);
+ordersRouter.get('/', orderController.getAll);
 
-export default productsRouter;
+export default ordersRouter;

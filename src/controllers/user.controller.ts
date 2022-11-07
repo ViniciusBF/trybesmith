@@ -6,9 +6,9 @@ export default class UsersController {
   public usersService = new UsersService();
 
   create = async (req: Request, res: Response) => {
-    const product = req.body;
+    const user = req.body;
 
-    const token = await this.usersService.create(product);
+    const token = await this.usersService.create(user);
     res.status(201).json({ token });
   };
 }
